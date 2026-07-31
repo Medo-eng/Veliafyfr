@@ -1,0 +1,174 @@
+:root {
+  --bg: #450450;
+  --accent: #ec8dec;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Manrope, sans-serif;
+}
+
+.progress-banner {
+  background: rgba(236, 141, 236, 0.18);
+  border-bottom: 1px solid rgba(236, 141, 236, 0.45);
+  color: var(--accent);
+  text-align: center;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.progress-banner span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.brand {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+main.legal {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem 1.75rem 4rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  color: var(--accent);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin: 2rem 0 0.75rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 1.15rem 0 0.5rem;
+}
+
+p,
+li {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+p {
+  margin-bottom: 0.9rem;
+}
+
+ul {
+  margin: 0 0 1rem 1.2rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.highlight {
+  border: 1px solid rgba(236, 141, 236, 0.45);
+  border-radius: 1rem;
+  padding: 1rem 1.15rem;
+  background: rgba(236, 141, 236, 0.1);
+  font-weight: 600;
+}
+
+.contact-block {
+  border-top: 1px solid rgba(236, 141, 236, 0.25);
+  padding: 0.5rem 0 0.25rem;
+  margin-top: 0.5rem;
+}
+
+footer {
+  padding: 1.5rem 1.75rem 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+  border-top: 1px solid rgba(236, 141, 236, 0.2);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
