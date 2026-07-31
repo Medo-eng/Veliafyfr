@@ -70,6 +70,10 @@
       }
 
       header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
         padding: 1.5rem 1.75rem;
         max-width: 56rem;
         margin: 0 auto;
@@ -80,6 +84,24 @@
         font-size: 1.5rem;
         color: var(--accent);
         letter-spacing: 0.02em;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 1.25rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      nav a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a[aria-current="page"] {
+        color: var(--accent);
       }
 
       main {
@@ -191,7 +213,11 @@
     </div>
 
     <header>
-      <div class="brand">Veliafy</div>
+      <a class="brand" href="index.html">Veliafy</a>
+      <nav>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="pricing.html">Pricing</a>
+      </nav>
     </header>
 
     <main>
@@ -203,7 +229,7 @@
           in one connected workspace, guided by an AI assistant that stays with
           you through every stage.
         </p>
-        <a class="cta" href="mailto:hello@veliafy.com">Get in touch</a>
+        <a class="cta" href="pricing.html">See pricing</a>
         <p class="cta-note">Early access and updates — product still in progress.</p>
       </section>
 
@@ -264,6 +290,7 @@
 
     <footer>
       &copy; 2026 Veliafy · Still in progress ·
+      <a href="pricing.html" style="color: #ec8dec">Pricing</a> ·
       <a href="mailto:hello@veliafy.com" style="color: #ec8dec">Contact</a>
     </footer>
   </body>

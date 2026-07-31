@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing — Veliafy</title>
+    <meta
+      name="description"
+      content="Veliafy pricing: Free, Starter $19, Growth $49, and Scale $99. Annual plans save about 20%."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #450450;
+        --accent: #ec8dec;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--white);
+        font-family: Manrope, sans-serif;
+      }
+
+      .progress-banner {
+        background: rgba(236, 141, 236, 0.18);
+        border-bottom: 1px solid rgba(236, 141, 236, 0.45);
+        color: var(--accent);
+        text-align: center;
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .progress-banner span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .progress-dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--accent);
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.35;
+        }
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.5rem 1.75rem;
+        max-width: 72rem;
+        margin: 0 auto;
+      }
+
+      .brand {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 1.5rem;
+        color: var(--accent);
+        letter-spacing: 0.02em;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 1.25rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      nav a {
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a[aria-current="page"] {
+        color: var(--accent);
+      }
+
+      main {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 1.25rem 1.75rem 4rem;
+      }
+
+      .intro {
+        text-align: center;
+        max-width: 40rem;
+        margin: 0 auto 2.5rem;
+      }
+
+      h1 {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: var(--accent);
+        line-height: 1.15;
+        margin-bottom: 0.85rem;
+      }
+
+      .lede {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.88);
+        margin-bottom: 1.5rem;
+      }
+
+      .billing-toggle {
+        display: inline-flex;
+        border: 1px solid rgba(236, 141, 236, 0.45);
+        border-radius: 999px;
+        padding: 0.25rem;
+        gap: 0.15rem;
+      }
+
+      .billing-toggle button {
+        font-family: Manrope, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.75);
+        padding: 0.55rem 1.1rem;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+
+      .billing-toggle button[aria-pressed="true"] {
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .save-note {
+        margin-top: 0.75rem;
+        font-size: 0.85rem;
+        color: rgba(236, 141, 236, 0.9);
+      }
+
+      .tiers {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 720px) {
+        .tiers {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .tiers {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .tier {
+        border: 1px solid rgba(236, 141, 236, 0.3);
+        border-radius: 1.25rem;
+        padding: 1.5rem 1.35rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .tier.popular {
+        border-color: var(--accent);
+        background: rgba(236, 141, 236, 0.1);
+      }
+
+      .tier-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+
+      .tier h2 {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 1.25rem;
+        color: var(--accent);
+      }
+
+      .badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--bg);
+        background: var(--accent);
+        padding: 0.3rem 0.55rem;
+        border-radius: 999px;
+      }
+
+      .price {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 2rem;
+        color: var(--white);
+        line-height: 1;
+      }
+
+      .price span {
+        font-family: Manrope, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .price-annual {
+        display: none;
+      }
+
+      body.annual .price-monthly {
+        display: none;
+      }
+
+      body.annual .price-annual {
+        display: block;
+      }
+
+      .audience {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.45;
+      }
+
+      .tier ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        margin-top: 0.25rem;
+        flex: 1;
+      }
+
+      .tier li {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.88);
+        padding-left: 1.1rem;
+        position: relative;
+      }
+
+      .tier li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .tier .cta {
+        display: block;
+        text-align: center;
+        margin-top: 0.75rem;
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 0.95rem;
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        transition: opacity 0.15s ease;
+      }
+
+      .tier.popular .cta {
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .tier .cta:hover {
+        opacity: 0.88;
+      }
+
+      .why {
+        margin-top: 3.5rem;
+        max-width: 48rem;
+      }
+
+      .why h2 {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 1.35rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .why p {
+        font-size: 1rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.88);
+        margin-bottom: 1rem;
+      }
+
+      .why p:last-child {
+        margin-bottom: 0;
+      }
+
+      footer {
+        padding: 1.5rem 1.75rem 2rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.65);
+        border-top: 1px solid rgba(236, 141, 236, 0.2);
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-banner" role="status">
+      <span>
+        <span class="progress-dot" aria-hidden="true"></span>
+        Still in progress — this site and product are under active development
+      </span>
+    </div>
+
+    <header>
+      <a class="brand" href="index.html">Veliafy</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h1>Pricing</h1>
+        <p class="lede">
+          Start free with a real AI business plan. Upgrade when you’re ready to
+          launch, track, and scale — not before.
+        </p>
+        <div class="billing-toggle" role="group" aria-label="Billing period">
+          <button type="button" id="btn-monthly" aria-pressed="true">
+            Monthly
+          </button>
+          <button type="button" id="btn-annual" aria-pressed="false">
+            Annual
+          </button>
+        </div>
+        <p class="save-note">Annual saves ~20% on all paid tiers</p>
+      </div>
+
+      <div class="tiers">
+        <article class="tier">
+          <div class="tier-top">
+            <h2>Free</h2>
+          </div>
+          <div class="price">
+            <div class="price-monthly">$0 <span>/mo</span></div>
+            <div class="price-annual">$0 <span>/mo</span></div>
+          </div>
+          <p class="audience">Lead gen / try-before-buy</p>
+          <ul>
+            <li>1 AI business plan generation</li>
+            <li>1 active idea</li>
+            <li>Basic task checklist</li>
+            <li>Tool recommendations (view only, no export)</li>
+          </ul>
+          <a class="cta" href="mailto:hello@veliafy.com">Get started free</a>
+        </article>
+
+        <article class="tier">
+          <div class="tier-top">
+            <h2>Starter</h2>
+          </div>
+          <div class="price">
+            <div class="price-monthly">$19 <span>/mo</span></div>
+            <div class="price-annual">$15 <span>/mo billed yearly</span></div>
+          </div>
+          <p class="audience">Solo founders testing one idea</p>
+          <ul>
+            <li>Full AI plan generator (10 regenerations/mo)</li>
+            <li>1 active business</li>
+            <li>Full task / PM system</li>
+            <li>Tool stack recommendations with export</li>
+            <li>Basic post-launch SEO tracking (1 site)</li>
+          </ul>
+          <a class="cta" href="mailto:hello@veliafy.com">Choose Starter</a>
+        </article>
+
+        <article class="tier popular">
+          <div class="tier-top">
+            <h2>Growth</h2>
+            <span class="badge">Most popular</span>
+          </div>
+          <div class="price">
+            <div class="price-monthly">$49 <span>/mo</span></div>
+            <div class="price-annual">$39 <span>/mo billed yearly</span></div>
+          </div>
+          <p class="audience">Builders actively launching</p>
+          <ul>
+            <li>3 active businesses</li>
+            <li>Unlimited AI plan regenerations</li>
+            <li>Full PM system</li>
+            <li>SEO + analytics dashboard</li>
+            <li>Ad-spend tracking (1 connected ad account)</li>
+            <li>Priority DeepSeek model tier for sharper plans</li>
+          </ul>
+          <a class="cta" href="mailto:hello@veliafy.com">Choose Growth</a>
+        </article>
+
+        <article class="tier">
+          <div class="tier-top">
+            <h2>Scale</h2>
+          </div>
+          <div class="price">
+            <div class="price-monthly">$99 <span>/mo</span></div>
+            <div class="price-annual">$79 <span>/mo billed yearly</span></div>
+          </div>
+          <p class="audience">Serial founders / small agencies</p>
+          <ul>
+            <li>Unlimited active businesses</li>
+            <li>Everything in Growth</li>
+            <li>Multi-account ad-spend management</li>
+            <li>White-label exports (for consultants pitching clients)</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="cta" href="mailto:hello@veliafy.com">Choose Scale</a>
+        </article>
+      </div>
+
+      <section class="why">
+        <h2>Why this shape</h2>
+        <p>
+          <strong style="color: #ec8dec">Free is a real product, not a teaser.</strong>
+          One full AI-generated plan is enough to feel the “wow” and see exactly
+          what more looks like — that’s the conversion engine and the demo hook
+          at the same time.
+        </p>
+        <p>
+          <strong style="color: #ec8dec">Growth at $49 is the anchor.</strong>
+          Starter feels limited, Scale feels like overkill, Growth feels right.
+          At $49, a 25% affiliate cut is $12.25/referral/month recurring — worth
+          promoting when customers stick around.
+        </p>
+        <p>
+          <strong style="color: #ec8dec">Ad-spend management starts at Growth.</strong>
+          That module has real ongoing cost, so gating it protects margin and
+          gives Starter users a clear upgrade path once they’re ready to run
+          ads.
+        </p>
+        <p>
+          <strong style="color: #ec8dec">Scale anchors the ladder</strong>
+          and opens a path for consultants and agencies — its presence makes
+          Growth look reasonably priced, even if most people don’t need it yet.
+        </p>
+        <p>
+          Annual (~20% off) matters more than it sounds: upfront cash funds AI
+          usage and runway, and people don’t reconsider every month.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 Veliafy · Still in progress ·
+      <a href="index.html">Home</a> ·
+      <a href="mailto:hello@veliafy.com">Contact</a>
+    </footer>
+
+    <script>
+      const body = document.body;
+      const monthly = document.getElementById("btn-monthly");
+      const annual = document.getElementById("btn-annual");
+
+      monthly.addEventListener("click", () => {
+        body.classList.remove("annual");
+        monthly.setAttribute("aria-pressed", "true");
+        annual.setAttribute("aria-pressed", "false");
+      });
+
+      annual.addEventListener("click", () => {
+        body.classList.add("annual");
+        monthly.setAttribute("aria-pressed", "false");
+        annual.setAttribute("aria-pressed", "true");
+      });
+    </script>
+  </body>
+</html>
