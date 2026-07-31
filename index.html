@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veliafy</title>
+    <title>Veliafy — From idea to real</title>
     <meta
       name="description"
-      content="Veliafy turns a raw business idea into a real path forward — planning, organization, and AI guidance in one workspace."
+      content="Veliafy turns a raw business idea into a real path forward — planning, organization, marketing, and AI guidance in one connected workspace."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,12 +32,47 @@
         background: var(--bg);
         color: var(--white);
         font-family: Manrope, sans-serif;
-        display: flex;
-        flex-direction: column;
+      }
+
+      .progress-banner {
+        background: rgba(236, 141, 236, 0.18);
+        border-bottom: 1px solid rgba(236, 141, 236, 0.45);
+        color: var(--accent);
+        text-align: center;
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .progress-banner span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .progress-dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--accent);
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.35;
+        }
       }
 
       header {
         padding: 1.5rem 1.75rem;
+        max-width: 56rem;
+        margin: 0 auto;
       }
 
       .brand {
@@ -48,16 +83,14 @@
       }
 
       main {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 1.75rem 4rem;
+        max-width: 56rem;
+        margin: 0 auto;
+        padding: 1.5rem 1.75rem 4rem;
       }
 
       .hero {
-        max-width: 36rem;
         text-align: center;
+        padding: 2rem 0 3.5rem;
       }
 
       h1 {
@@ -68,11 +101,12 @@
         margin-bottom: 1rem;
       }
 
-      p {
-        font-size: 1.05rem;
-        line-height: 1.6;
+      .lede {
+        font-size: 1.1rem;
+        line-height: 1.65;
         color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 2rem;
+        max-width: 38rem;
+        margin: 0 auto 1.75rem;
       }
 
       .cta {
@@ -91,28 +125,146 @@
         opacity: 0.88;
       }
 
+      .cta-note {
+        margin-top: 0.85rem;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      section {
+        padding: 2.25rem 0;
+        border-top: 1px solid rgba(236, 141, 236, 0.25);
+      }
+
+      h2 {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 1.35rem;
+        color: var(--accent);
+        margin-bottom: 0.85rem;
+      }
+
+      p {
+        font-size: 1.02rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .features {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .features {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .feature h3 {
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 1.05rem;
+        color: var(--accent);
+        margin-bottom: 0.45rem;
+      }
+
+      .feature p {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
       footer {
-        padding: 1.25rem 1.75rem 1.75rem;
+        padding: 1.5rem 1.75rem 2rem;
         text-align: center;
         font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.65);
+        border-top: 1px solid rgba(236, 141, 236, 0.2);
       }
     </style>
   </head>
   <body>
+    <div class="progress-banner" role="status">
+      <span>
+        <span class="progress-dot" aria-hidden="true"></span>
+        Still in progress — this site and product are under active development
+      </span>
+    </div>
+
     <header>
       <div class="brand">Veliafy</div>
     </header>
+
     <main>
-      <section class="hero">
+      <section class="hero" style="border-top: none; padding-top: 0.5rem">
         <h1>From idea to real</h1>
-        <p>
-          Veliafy takes a raw business concept and gives it a clear path —
-          planning, organization, and AI guidance in one connected workspace.
+        <p class="lede">
+          Veliafy takes a raw business concept and gives it an actual path
+          forward — thinking, planning, organization, and tool recommendations
+          in one connected workspace, guided by an AI assistant that stays with
+          you through every stage.
         </p>
         <a class="cta" href="mailto:hello@veliafy.com">Get in touch</a>
+        <p class="cta-note">Early access and updates — product still in progress.</p>
+      </section>
+
+      <section>
+        <h2>What it is</h2>
+        <p>
+          Not a one-shot business-plan PDF that disappears. Veliafy is an
+          ongoing workspace: the AI has context on your idea, budget, stage, and
+          progress, and stays available from first defining the concept through
+          planning, building, and marketing once it exists.
+        </p>
+      </section>
+
+      <section>
+        <h2>What you get</h2>
+        <div class="features">
+          <div class="feature">
+            <h3>AI assistant</h3>
+            <p>
+              Structured plans from your idea, follow-up conversation, and
+              stage-aware tool recommendations — not generic templates.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Foundation</h3>
+            <p>
+              Capture your idea, niche, budget, audience, and stage so
+              everything else in the product stays specific to you.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Organization</h3>
+            <p>
+              Boards, lists, calendars, docs, and a whiteboard — keep the work
+              of building the business in one place.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Marketing &amp; finance</h3>
+            <p>
+              Channel strategy, spend tracking, and a simple runway view so
+              progress and budget stay visible together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Who it’s for</h2>
+        <p>
+          People with a business idea who need more than a blank doc — a clear
+          path, practical next steps, and guidance that adapts as the idea
+          evolves. Built for early-stage builders who want one workspace instead
+          of a pile of disconnected tools.
+        </p>
       </section>
     </main>
-    <footer>&copy; 2026 Veliafy</footer>
+
+    <footer>
+      &copy; 2026 Veliafy · Still in progress ·
+      <a href="mailto:hello@veliafy.com" style="color: #ec8dec">Contact</a>
+    </footer>
   </body>
 </html>
